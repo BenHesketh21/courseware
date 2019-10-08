@@ -9,6 +9,8 @@
 	- [Iterating an Array](#iterating-an-array-1)
 	- [Waiting for a File to Exist](#waiting-for-a-file-to-exist)
 	- [Infinite Loops](#infinite-loops)
+- [Do-While Loops](#dowhile-loops)
+	- [Do While Loops for User Input](#do-while-loops-for-user-input)
 
 <!--TOC_END-->
 ## Overview
@@ -113,4 +115,3 @@ Do {
     $number = Read-Host "Please enter a number less than or equal to 10"
 } While([Int]$number -gt 10) 
 ```
-
