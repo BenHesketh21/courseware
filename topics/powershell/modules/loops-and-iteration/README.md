@@ -13,6 +13,9 @@
 	- [Do While Loops for User Input](#do-while-loops-for-user-input)
 - [Do Until Loops](#do-until-loops)
 	- [Waiting for a File to Exist](#waiting-for-a-file-to-exist)
+- [Tasks](#tasks)
+	- [File Contents](#file-contents)
+	- [For Loop](#for-loop-1)
 
 <!--TOC_END-->
 ## Overview
