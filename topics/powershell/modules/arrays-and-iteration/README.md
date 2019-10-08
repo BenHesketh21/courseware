@@ -18,7 +18,7 @@ The For loop is a very bsaic type of loop which can be used in most situations.
 There are a few main parts to a For loop:
 - Value of a variable
 - Condition for whether the next iteration of the loop should run
-- An action to be perfomed against the variable on each iteration
+- An action to be perfomed against the variable on each iteration, such as just adding `1` to it
 ```powershell
 For([VARIABLE];[CONDITION];[VARIABLE_ACTION]) {
     # loop statements
