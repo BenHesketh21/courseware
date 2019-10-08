@@ -2,6 +2,9 @@
 <!--TOC_START-->
 ### Contents
 - [Overview](#overview)
+- [Loops](#loops)
+	- [For Loop](#for-loop)
+		- [Iterating an Array](#iterating-an-array)
 
 <!--TOC_END-->
 ## Overview
