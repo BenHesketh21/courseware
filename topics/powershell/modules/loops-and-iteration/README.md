@@ -1,4 +1,4 @@
-# Arrays and Iteration
+# Loops and Iteration
 <!--TOC_START-->
 ### Contents
 - [Overview](#overview)
