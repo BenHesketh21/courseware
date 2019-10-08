@@ -5,6 +5,10 @@
 - [Loops](#loops)
 	- [For Loop](#for-loop)
 		- [Iterating an Array](#iterating-an-array)
+	- [While Loop](#while-loop)
+	- [Iterating an Array](#iterating-an-array-1)
+	- [Waiting for a File to Exist](#waiting-for-a-file-to-exist)
+	- [Infinite Loops](#infinite-loops)
 
 <!--TOC_END-->
 ## Overview
