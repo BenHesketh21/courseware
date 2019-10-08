@@ -162,7 +162,8 @@ Now try executing the script:
 ./error-check-for-loop.ps1
 ```
 ### While Loop
-The For loop example can be converted to the following to allow it work as a While loop:
+The For loop example can be converted to the following to allow it work as a While loop.
+Create a file called `error-check-while-loop.ps1` and enter the following:
 ```powershell
 $content = Get-Content "log.txt"
 While ($line -lt $content.Length) {
@@ -171,4 +172,40 @@ While ($line -lt $content.Length) {
     }
     $line++
 }
+```
+Give the script a go:
+```powershell
+./error-check-while-loop.ps1
+```
+### Do While Loop
+Converting to a Do While loop from the While loop example above is very simple, just the condition needs to be moved.
+Try creating a file called `error-check-do-while-loop.ps1` and enter the following:
+```powershell
+$content = Get-Content "log.txt"
+Do {
+    if ($content[$line].Contains("[error]")) {
+        "Line: $($line+1): $($content[$line])"
+    }
+    $line++
+} While ($line -lt $content.Length) 
+```
+Give the script a go:
+```powershell
+./error-check-do-while-loop.ps1
+```
+### Do Until Loop
+The Do Until loop can be based off the Do While loop however the condition must be changed to check if the line number is equal to the length of the content instead.
+Try creating a file called `error-check-do-until-loop.ps1` and enter the following:
+```powershell
+$content = Get-Content "log.txt"
+Do {
+    if ($content[$line].Contains("[error]")) {
+        "Line: $($line+1): $($content[$line])"
+    }
+    $line++
+} While ($line -eq $content.Length) 
+```
+Give the script a go:
+```powershell
+./error-check-do-until-loop.ps1
 ```
