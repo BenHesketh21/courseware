@@ -159,3 +159,15 @@ Now try executing the script:
 ```powershell
 ./error-check-for-loop.ps1
 ```
+
+### While Loop
+The For loop example can be converted to the following to allow it work as a While loop:
+```powershell
+$content = Get-Content "log.txt"
+While ($line -lt $content.Length) {
+    if ($content[$line].Contains("[error]")) {
+        "Line: $($line+1): $($content[$line])"
+    }
+    $line++
+}
+```
