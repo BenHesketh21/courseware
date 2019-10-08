@@ -86,3 +86,31 @@ While (!(Test-Path "$filePath") -and ($counter -lt 10)) {
     $counter++
 }
 ```
+## Do-While Loops
+These are very similar to the while loop with once exception, the loops command block is executed before the condition is evaluted.
+So this is a great option if you are needing the command to execute at least once, even if the condition is never met.
+```powershell
+Do {
+    # commands
+} While ([CONDITION])
+```
+### Do While Loops for User Input
+One example use case for a Do While loop could be for taking user input.
+This example here will use a normal While loop to take numbers from user input until the number is less than or equal to 10:
+```powershell
+$number = Read-Host "Please enter a number less than or equal to 10"
+While([Int]$number -gt 10) {
+    $number = Read-Host "Please enter a number less than or equal to 10"
+}
+```
+Notice that we are having to run this line twice:
+```powershell
+$number = Read-Host "Please enter a number less than or equal to 10"
+```
+We can completely avoid this by using a `Do-While` loop:
+```powershell
+Do {
+    $number = Read-Host "Please enter a number less than or equal to 10"
+} While([Int]$number -gt 10) 
+```
+
