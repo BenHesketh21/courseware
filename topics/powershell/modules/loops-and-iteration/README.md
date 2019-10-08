@@ -135,3 +135,27 @@ Do {
     Start-Sleep 1
 } Until (Test-Path "$filePath") 
 ```
+## Tasks
+We are going to use the different types of loops explained above to iterate over a log file (`log.txt`) and extract the errors, which can be found in this folder.
+While working through this set of tasks make sure that you are creating and running the scripts in this directory.
+### File Contents
+Before we can try this out with any type of loop we will need to get the file content to iterate through.
+So for each of the following steps you will need this at the top of your script:
+```powershell
+$content = Get-Content "log.txt"
+```
+### For Loop
+With the for loop we can iterate over the file content just like an array, checking if the element contains an error message, printing it out to the console if it does. 
+Create a file in this folder called `error-check-for-loop.ps1` in this directory and enter the following:
+```powershell
+$content = Get-Content "log.txt"
+For ($i=0; $i -lt $content.Length; $i++) {
+    if ($content[$i].Contains("[error]")) {
+        "Line: $($i+1): $($content[$i])"
+    }
+}
+```
+Now try executing the script:
+```powershell
+./error-check-for-loop.ps1
+```
