@@ -2,10 +2,9 @@
 <!--TOC_START-->
 ### Contents
 - [Overview](#overview)
-- [Loops](#loops)
-	- [For Loop](#for-loop)
-		- [Iterating an Array](#iterating-an-array)
-	- [While Loop](#while-loop)
+- [For Loop](#for-loop)
+	- [Iterating an Array](#iterating-an-array)
+- [While Loop](#while-loop)
 	- [Iterating an Array](#iterating-an-array-1)
 	- [Waiting for a File to be Deleted](#waiting-for-a-file-to-be-deleted)
 	- [Infinite Loops](#infinite-loops)
