@@ -60,16 +60,16 @@ While ($i -ne $colours.length) {
     $colours[$i]
 }
 ```
-### Waiting for a File to Exist
-A more appropriate implementation of a while loop would be to use on something that needs to wait until a condition is met, such as a file existing.
+### Waiting for a File to be Deleted
+A more appropriate implementation of a while loop would be to use it on something that needs to wait until a condition is met, such as a file being deleted.
 
 In the example shown below the following is evaluated:
 - Set a `filePath` variable for a file called `file.txt` in the user's home directory
-- For the loop condition check the file exists with `Test-Path`, the boolean result of this can be inverted to make it so the condition is **True** if the file **doesn't** exist
+- For the loop condition check the file exists with `Test-Path`, this will return as **True** when the file exists
 ```powershell
 $filePath = "$HOME\file.txt"
-While (!(Test-Path "$filePath")) {
-    "Waiting for $filePath to exist..."
+While (Test-Path "$filePath") {
+    "Waiting for $filePath to be deleted exist..."
     Start-Sleep 2
 }
 ```
@@ -82,13 +82,13 @@ For example here, if the loop has executed 10 times, then it will exit because b
 ```powershell
 $counter = 0
 $filePath = "$HOME\file.txt"
-While (!(Test-Path "$filePath") -and ($counter -lt 10)) {
-    "Waiting for $filePath to exist..."
-    Start-Sleep 2
+While (Test-Path "$filePath" -and ($counter -lt 10)) {
+    "Waiting for $filePath to be deleted..."
+    Start-Sleep 1
     $counter++
 }
 ```
-## Do-While Loops
+## Do While Loops
 These are very similar to the while loop with once exception, the loops command block is executed before the condition is evaluted.
 So this is a great option if you are needing the command to execute at least once, even if the condition is never met.
 ```powershell
@@ -114,4 +114,22 @@ We can completely avoid this by using a `Do-While` loop:
 Do {
     $number = Read-Host "Please enter a number less than or equal to 10"
 } While([Int]$number -gt 10) 
+```
+## Do Until Loops
+Do until loops are almost identical to the Do While loops except for the condition is effectively inverted.
+So as long as the condition **is not met**, the loop will continue to  execute **until** the condition is met.
+
+The syntax of a Do Until loop is strucured the same as a Do While loop:
+```powershell
+Do {
+    # commands
+} Until([CONDITION])
+```
+### Waiting for a File to Exist
+Because the condition for this type of loop is flipped, we can take the example from before to wait for file to be deleted and use this to wait for a file to be created:
+```powershell
+Do {
+    "Waiting for $filePath to be deleted..."
+    Start-Sleep 1
+} Until (Test-Path "$filePath") 
 ```
