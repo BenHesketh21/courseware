@@ -23,11 +23,10 @@
 Arrays and iteration can be used in PowerShell for solving extensive, repetetive, procedural tasks.
 One of PowerShells main purpose is to automate tasks on Windows, often for multiple machines.
 
-## Loops
 The way that arrays can be iterated is by using loops.
 There are a few different types of loops which can utilise depending on the situation.
 
-### For Loop
+## For Loop
 The For loop is a very bsaic type of loop which can be used in most situations.
 
 There are a few main parts to a For loop:
@@ -39,7 +38,7 @@ For([VARIABLE];[CONDITION];[VARIABLE_ACTION]) {
     # commands
 }
 ```
-#### Iterating an Array
+### Iterating an Array
 For loops are commonly used to step through arrays, here's the logic used and an example to follow:
 - Variable `i` equals `0` at the start
 - For the condiiton, if the value of `i` is less than the value of the array's length then continue, otherwise exit the loop
@@ -51,7 +50,7 @@ For ($i=0;$i -lt $colours.length; $i++) {
     $colours[$i]
 }
 ```
-### While Loop
+## While Loop
 While loops work by providing a single condition, the loop will continue to execute so long as that condition is met:
 ```powershell
 While([CONDITION]) {
@@ -163,7 +162,6 @@ Now try executing the script:
 ```powershell
 ./error-check-for-loop.ps1
 ```
-
 ### While Loop
 The For loop example can be converted to the following to allow it work as a While loop:
 ```powershell
