@@ -16,6 +16,8 @@
 	- [File Contents](#file-contents)
 	- [For Loop](#for-loop-1)
 	- [While Loop](#while-loop-1)
+	- [Do While Loop](#do-while-loop)
+	- [Do Until Loop](#do-until-loop)
 
 <!--TOC_END-->
 ## Overview
