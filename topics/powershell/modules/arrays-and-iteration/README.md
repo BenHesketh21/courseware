@@ -24,7 +24,7 @@ There are a few main parts to a For loop:
 - An action to be perfomed against the variable on each iteration, such as just adding `1` to it
 ```powershell
 For([VARIABLE];[CONDITION];[VARIABLE_ACTION]) {
-    # loop statements
+    # commands
 }
 ```
 #### Iterating an Array
@@ -37,5 +37,48 @@ For loops are commonly used to step through arrays, here's the logic used and an
 $colours = @("Red", "Blue", "Green", "Orange", "Purple")
 For ($i=0;$i -lt $colours.length; $i++) {
     $colours[$i]
+}
+```
+### While Loop
+While loops work by providing a single condition, the loop will continue to execute so long as that condition is met:
+```powershell
+While([CONDITION]) {
+    # commands
+}
+```
+### Iterating an Array
+It would be slightly better to use a For loop to iterate arrays but it can still be done with a While loop:
+```powershell
+$colours = @("Red", "Blue", "Green", "Orange", "Purple")
+While ($i -ne $colours.length) {
+    $colours[$i]
+}
+```
+### Waiting for a File to Exist
+A more appropriate implementation of a while loop would be to use on something that needs to wait until a condition is met, such as a file existing.
+
+In the example shown below the following is evaluated:
+- Set a `filePath` variable for a file called `file.txt` in the user's home directory
+- For the loop condition check the file exists with `Test-Path`, the boolean result of this can be inverted to make it so the condition is **True** if the file **doesn't** exist
+```powershell
+$filePath = "$HOME\file.txt"
+While (!(Test-Path "$filePath")) {
+    "Waiting for $filePath to exist..."
+    Start-Sleep 2
+}
+```
+### Infinite Loops
+Something to be very cautious of when using While loops (and any type of loop for that matter) is to not get into an infinite loop.
+If the condition for the loop is always met, then it will never stop running.
+
+Taking the waiting for a file example, we can add a counter and a second condition to the loop.
+For example here, if the loop has executed 10 times, then it will exit because both conditions inside the loop condition need to be met:
+```powershell
+$counter = 0
+$filePath = "$HOME\file.txt"
+While (!(Test-Path "$filePath") -and ($counter -lt 10)) {
+    "Waiting for $filePath to exist..."
+    Start-Sleep 2
+    $counter++
 }
 ```
