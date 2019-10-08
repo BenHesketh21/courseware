@@ -16,6 +16,7 @@
 - [Tasks](#tasks)
 	- [File Contents](#file-contents)
 	- [For Loop](#for-loop-1)
+	- [While Loop](#while-loop-1)
 
 <!--TOC_END-->
 ## Overview
