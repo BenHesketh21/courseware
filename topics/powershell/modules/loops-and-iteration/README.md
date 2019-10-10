@@ -83,8 +83,10 @@ While (Test-Path "$filePath") {
 Something to be very cautious of when using While loops (and any type of loop for that matter) is to not get into an infinite loop.
 If the condition for the loop is always met, then it will never stop running.
 
-Taking the waiting for a file example, we can add a counter and a second condition to the loop.
-For example here, if the loop has executed 10 times, then it will exit because both conditions inside the loop condition need to be met:
+Taking the waiting for a file example, we can add a counter which is incremented by `1` every time the loop executes and second condition to check if the counter has a value less than `10`.
+For the example here, the conditions for the loop to continue running are:
+- The file exists
+- The counter has a value less that 10
 ```powershell
 $counter = 0
 $filePath = "$HOME\file.txt"
