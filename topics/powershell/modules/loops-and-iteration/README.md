@@ -82,7 +82,7 @@ While (Test-Path "$filePath") {
 ### Infinite Loops
 Something to be very cautious of when using While loops (and any type of loop for that matter) is to not get into an infinite loop.
 If the condition for the loop is always met, then it will never stop running.
-
+#### Avoiding Infinite Loops Example
 Taking the waiting for a file example, we can add a counter which is incremented by `1` every time the loop executes and second condition to check if the counter has a value less than `10`.
 For the example here, the conditions for the loop to continue running are:
 - The file exists
