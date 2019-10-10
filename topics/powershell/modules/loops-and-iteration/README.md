@@ -21,14 +21,14 @@
 
 <!--TOC_END-->
 ## Overview
-Arrays and iteration can be used in PowerShell for solving extensive, repetetive, procedural tasks.
+Arrays and iteration can be used in PowerShell for solving extensive, repetitive, procedural tasks.
 One of PowerShells main purpose is to automate tasks on Windows, often for multiple machines.
 
 The way that arrays can be iterated is by using loops.
-There are a few different types of loops which can utilise depending on the situation.
+There are a few different types of loops which can be utilised depending on the situation.
 
 ## For Loop
-The For loop is a very bsaic type of loop which can be used in most situations.
+The For loop is a very basic type of loop which can be used in most situations.
 
 There are a few main parts to a For loop:
 - Value of a variable
@@ -95,7 +95,7 @@ While (Test-Path "$filePath" -and ($counter -lt 10)) {
 }
 ```
 ## Do While Loops
-These are very similar to the while loop with once exception, the loops command block is executed before the condition is evaluted.
+These are very similar to the while loop with one exception, the loops command block is executed before the condition is evaluated.
 So this is a great option if you are needing the command to execute at least once, even if the condition is never met.
 ```powershell
 Do {
@@ -150,7 +150,7 @@ $content = Get-Content "log.txt"
 ```
 ### For Loop
 With the for loop we can iterate over the file content just like an array, checking if the element contains an error message, printing it out to the console if it does. 
-Create a file in this folder called `error-check-for-loop.ps1` in this directory and enter the following:
+Create a file in this folder called `error-check-for-loop.ps1` and enter the following:
 ```powershell
 $content = Get-Content "log.txt"
 For ($i=0; $i -lt $content.Length; $i++) {
