@@ -8,6 +8,7 @@
 	- [Iterating an Array](#iterating-an-array-1)
 	- [Waiting for a File to be Deleted](#waiting-for-a-file-to-be-deleted)
 	- [Infinite Loops](#infinite-loops)
+		- [Avoiding Infinite Loops Example](#avoiding-infinite-loops-example)
 - [Do While Loops](#do-while-loops)
 	- [Do While Loops for User Input](#do-while-loops-for-user-input)
 - [Do Until Loops](#do-until-loops)
