@@ -9,6 +9,8 @@
 <!--TOC_START-->
 ### Contents
 - [Overview](#overview)
+- [Installation](#installation)
+	- [Pip](#pip)
 
 <!--TOC_END-->
 ## Overview
