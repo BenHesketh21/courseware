@@ -14,7 +14,12 @@
 ### Contents
 - [Overview](#overview)
 - [Installation](#installation)
-	- [Pip](#pip)
+	- [Using Pip](#using-pip)
+- [Task](#task)
+	- [Install Ansible](#install-ansible)
+	- [Configure a Playbook to Install a Web Server](#configure-a-playbook-to-install-a-web-server)
+	- [Run the Playbook](#run-the-playbook)
+	- [Check NGINX has been Installed Correctly](#check-nginx-has-been-installed-correctly)
 
 <!--TOC_END-->
 ## Overview
