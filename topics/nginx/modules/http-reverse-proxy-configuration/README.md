@@ -28,7 +28,7 @@
 
 <!--TOC_END-->
 ## Overview
-An NGINX reverse proxy server sits in front of web servers and forwards client (e.g. web browser) requests to those web servers.
+An NGINX reverse proxy server sits in front of web servers and forwards client requests (e.g. web browsers) to those web servers.
 Reverse proxies are typically implemented to help increase security, performance, and reliability.
 ## Reasons for Using a Reverse Proxy
 There are several reasons for configuring your web applications to be behind a reverse proxy.
@@ -71,7 +71,7 @@ http {
 }
 ```
 ### Multi-Tier Applications
-Applications are often developed in multiple tiers, frontend, backend and database for example.
+Applications are often developed in multiple tiers; front-end, back-end and database for example.
 NGINX can be used as reverse proxy, giving access to different tiers of the application depending on what URL is used.
 Here is an example for a reverse proxy configuration that serves the `web-app` by default, but when `/api` is accessed, HTTP requests are sent to the `api` server:
 ```text

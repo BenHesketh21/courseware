@@ -16,7 +16,7 @@ Instead of copying and pasting the same code over and over again, we can use a f
 
 ## Powershell Functions
 
-When you first start out with Powershell, you aren't always too concerned with things such as modularity, reusibility and "best practices". As time goes on, you will very quickly realise that you are repeating yourself in code, a lot.
+When you first start out with Powershell, you aren't always too concerned with things such as modularity, reusibility and "best practices". As time goes on, you will very quickly realise that you are repeating yourself in code often.
 
 This is where functions become really useful. Copying and pasting isn't sustainable, so instead we create small "building blocks" that can be reused.
 
