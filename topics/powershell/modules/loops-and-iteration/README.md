@@ -1,6 +1,8 @@
 # Loops and Iteration
+
 <!--TOC_START-->
-### Contents
+## Contents
+	- [Contents](#contents)
 - [Overview](#overview)
 - [For Loop](#for-loop)
 	- [Iterating an Array](#iterating-an-array)
@@ -40,6 +42,7 @@ For([VARIABLE];[CONDITION];[VARIABLE_ACTION]) {
     # commands
 }
 ```
+
 ### Iterating an Array
 For loops are commonly used to step through arrays, here's the logic used and an example to follow:
 - Variable `i` equals `0` at the start
@@ -52,6 +55,7 @@ For ($i=0;$i -lt $colours.length; $i++) {
     $colours[$i]
 }
 ```
+
 ## While Loop
 While loops work by providing a single condition, the loop will continue to execute so long as that condition is met:
 ```powershell
@@ -59,6 +63,7 @@ While([CONDITION]) {
     # commands
 }
 ```
+
 ### Iterating an Array
 It would be slightly better to use a For loop to iterate arrays but it can still be done with a While loop:
 ```powershell
@@ -67,6 +72,7 @@ While ($i -ne $colours.length) {
     $colours[$i]
 }
 ```
+
 ### Waiting for a File to be Deleted
 A more appropriate implementation of a while loop would be to use it on something that needs to wait until a condition is met, such as a file being deleted.
 
@@ -80,9 +86,11 @@ While (Test-Path "$filePath") {
     Start-Sleep 2
 }
 ```
+
 ### Infinite Loops
 Something to be very cautious of when using While loops (and any type of loop for that matter) is to not get into an infinite loop.
 If the condition for the loop is always met, then it will never stop running.
+
 #### Avoiding Infinite Loops Example
 Taking the waiting for a file example, we can add a counter which is incremented by `1` every time the loop executes and second condition to check if the counter has a value less than `10`.
 For the example here, the conditions for the loop to continue running are:
@@ -97,6 +105,7 @@ While (Test-Path "$filePath" -and ($counter -lt 10)) {
     $counter++
 }
 ```
+
 ## Do While Loops
 These are very similar to the while loop with one exception, the loops command block is executed before the condition is evaluated.
 So this is a great option if you are needing the command to execute at least once, even if the condition is never met.
@@ -105,6 +114,7 @@ Do {
     # commands
 } While ([CONDITION])
 ```
+
 ### Do While Loops for User Input
 One example use case for a Do While loop could be for taking user input.
 This example here will use a normal While loop to take numbers from user input until the number is less than or equal to 10:
@@ -124,6 +134,7 @@ Do {
     $number = Read-Host "Please enter a number less than or equal to 10"
 } While([Int]$number -gt 10) 
 ```
+
 ## Do Until Loops
 Do until loops are almost identical to the Do While loops except for the condition is effectively inverted.
 So as long as the condition **is not met**, the loop will continue to  execute **until** the condition is met.
@@ -134,6 +145,7 @@ Do {
     # commands
 } Until([CONDITION])
 ```
+
 ### Waiting for a File to Exist
 Because the condition for this type of loop is flipped, we can take the example from before to wait for file to be deleted and use this to wait for a file to be created:
 ```powershell
@@ -142,15 +154,18 @@ Do {
     Start-Sleep 1
 } Until (Test-Path "$filePath") 
 ```
+
 ## Tasks
 We are going to use the different types of loops explained above to iterate over a log file (`log.txt`) and extract the errors, which can be found in this folder.
 While working through this set of tasks make sure that you are creating and running the scripts in this directory.
+
 ### File Contents
 Before we can try this out with any type of loop we will need to get the file content to iterate through.
 So for each of the following steps you will need this at the top of your script:
 ```powershell
 $content = Get-Content "log.txt"
 ```
+
 ### For Loop
 With the for loop we can iterate over the file content just like an array, checking if the element contains an error message, printing it out to the console if it does. 
 Create a file in this folder called `error-check-for-loop.ps1` and enter the following:
@@ -166,6 +181,7 @@ Now try executing the script:
 ```powershell
 ./error-check-for-loop.ps1
 ```
+
 ### While Loop
 The For loop example can be converted to the following to allow it work as a While loop.
 Create a file called `error-check-while-loop.ps1` and enter the following:
@@ -182,6 +198,7 @@ Give the script a go:
 ```powershell
 ./error-check-while-loop.ps1
 ```
+
 ### Do While Loop
 Converting to a Do While loop from the While loop example above is very simple, just the condition needs to be moved.
 Try creating a file called `error-check-do-while-loop.ps1` and enter the following:
@@ -198,6 +215,7 @@ Give the script a go:
 ```powershell
 ./error-check-do-while-loop.ps1
 ```
+
 ### Do Until Loop
 The Do Until loop can be based off the Do While loop however the condition must be changed to check if the line number is equal to the length of the content instead.
 Try creating a file called `error-check-do-until-loop.ps1` and enter the following:
