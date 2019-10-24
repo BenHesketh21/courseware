@@ -1,7 +1,9 @@
 # Cloud Concepts
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 	- [What is the Cloud?](#what-is-the-cloud)
 	- [On-demand self service](#ondemand-self-service)
@@ -39,9 +41,11 @@ Hence the name `on demand self service`.
 #### Google Cloud Platform (GCP)
 This is how it looks for Google Cloud:
 ![Fork >](https://imgur.com/lwJQt2C.png)
+
 #### Amazon Web Services (AWS)
 This is how it looks for AWS:
 ![Fork >](https://imgur.com/cnqjq2M.png)
+
 #### Microsoft Azure (AZ)
 This is how it looks for Azure:
 ![Fork >](https://imgur.com/cK3lnGv.png)
@@ -82,6 +86,7 @@ These resources are dynamically assigned and reassigned in order to get optimal 
     * e.g. can this data be stored outside of the EU?
     * Can the application function well if the web-server is in the EU and the data it uses is in Australia?
     
+
 ### Rapid elasticity
 
 Elasticity is a fundamental property of the cloud.
@@ -127,6 +132,7 @@ At any stage of the production process economies of scale can be implemented.
   There are numerous ways how economies of scale can be implemented in the company like: hiring more experienced
    marketing employees, automate human to machine labor.
   
+
 ### Capital expenditure
 
 *Capital expenditure* (CapEx) are funds that company uses to upgrade, maintain, acquire physical assets like

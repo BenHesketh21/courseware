@@ -25,6 +25,8 @@ A computer network is a digital telecommunications network which allows nodes to
 Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 ## PowerShell [&xrarr;](./powershell)
 PowerShell is a task-based command-line shell and scripting language built on .NET.
+## Terraform [&xrarr;](./terraform)
+
 ## Traceroute [&xrarr;](./traceroute)
 In computing, `traceroute` and `tracert` are computer network diagnostic commands for displaying the route (path) and measuring transit delays of packets across an Internet Protocol (IP) network.
 ## Tracert [&xrarr;](./tracert)

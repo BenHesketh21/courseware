@@ -1,6 +1,9 @@
 # Models
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [OSI](#osi)
 - [TCP/IP](#tcpip)
@@ -12,6 +15,7 @@
 Models are used in networking as a representational and simplified way to give us a high-level understanding of the processes that are happening within a network.
 The two most popular models that are in use are the **OSI Model** and the **TCP/IP Model**.
 Both of these models have a layered architecture and provide similar functionalities.
+
 ## OSI
 The **Open System Interconnection Protocol** model is a **7 layer model**, which is a generic, protocol independent standard.
 1. **Physical Layer**

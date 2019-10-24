@@ -1,0 +1,71 @@
+body {
+    color: #004050;
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5em;
+    border: thin solid rgba(96, 108, 113, 0.5);
+    width: 95%;
+}
+
+#content {
+    width: 90%;
+    margin: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #1e6bb8;
+}
+
+pre[class*="language-"]:before, pre[class*="language-"]:after {
+    box-shadow: none !important;
+}
+
+code {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: none !important;
+    border-radius: 0.2em;
+    border: thin solid rgba(96, 108, 113, 0.3) !important;
+    background-image: none !important;
+    white-space: nowrap;
+}
+
+.qa-logo {
+    width: 7.5em;
+    padding: 1em;
+}
+
+#top-bar {
+    background-color: #00edb5;
+}
+
+#topic-heading {
+    color: #004050;
+    margin: auto;
+    font-weight: bolder;
+    padding-left: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.2em;
+}
+
+#module-heading {
+    font-weight: bolder;
+    color: white;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    color: #20d3ff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,6 +1,9 @@
 # Variables
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Tasks](#tasks)
 	- [Define and Access Variables](#define-and-access-variables)
@@ -21,6 +24,7 @@ myString = ["My", "String", "Variable", "Is", "Now", "An", "Array"]
 ```
 
 ## Tasks
+
 ### Define and Access Variables
 Here is some Groovy code that stores the current users name in a variable and then prints out "Hello" and the users name:
 ```groovy

@@ -13,9 +13,13 @@
     ]
 }
 -->
+
 # Introduction
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Use Cases](#use-cases)
 - [Example Outputs](#example-outputs)
@@ -37,6 +41,7 @@ The netstat tool can be used for the following:
 - Showing current connections to the machine
 
 ## Example Outputs
+
 ### Linux
 After running a `netstat` command on Linux, you should see an output of the connections to your machine:
 ```text
@@ -62,6 +67,7 @@ tcp        0      0 work-laptop:56710       101.59.190.35.bc.:https ESTABLISHED
 tcp        0      0 work-laptop:46112       ec2-3-9-202-151.e:https ESTABLISHED
 tcp        0      0 work-laptop:44858       ec2-52-215-192-13:https ESTABLISHED
 ```
+
 ### Windows
 When running `netstat` on Windows, you should see an output similar to the one below:
 ```text

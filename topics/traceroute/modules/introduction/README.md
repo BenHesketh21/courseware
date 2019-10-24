@@ -3,9 +3,13 @@
     "estTime": 10
 }
 -->
+
 # Introduction
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Traceroute Output](#traceroute-output)
 	- [Example Output](#example-output)
@@ -28,7 +32,9 @@ Here's an example of a path for going to `google.co.uk` from a computer in Londo
 
 The history of the route is recorded as the round-trip times of the packets received from each successive host (remote node) in the route (path); the sum of the mean times in each hop is a measure of the total time spent to establish the connection.
 Traceroute proceeds unless all (three) sent packets are lost more than twice. If this happens, the connection is lost and the route cannot be evaluated.
+
 ## Traceroute Output
+
 ### Example Output
 Below is an example output from a basic `traceroute` command to `google.com`:
 ```text
@@ -52,6 +58,7 @@ traceroute to google.com (172.217.169.78), 30 hops max, 60 byte packets
 17  172.253.66.101 (172.253.66.101)  10.034 ms 172.253.66.99 (172.253.66.99)  10.873 ms 172.253.66.101 (172.253.66.101)  10.751 ms
 18  lhr48s09-in-f14.1e100.net (172.217.169.78)  9.355 ms  9.113 ms  9.563 ms
 ```
+
 ### Output Meaning
 Below is a table showing the meaning of the different columns of the `traceroute` commands output.
 The data in the table is taken from the first 3 hops of the example above.
@@ -64,25 +71,32 @@ The data in the table is taken from the first 3 hops of the example above.
 
 #### Hop Number
 This is the first column and is simply the number of the hop along the route. In this case, it is the first hop.
+
 #### Name & IP Address
 This column has the IP address of the router. If it is available, the domain name will also be listed.
+
 #### RTT Columns
 The three `RTT` columns display the round trip time (RTT) for your packet to reach that point and return to your computer.
 This is listed in milliseconds.
 There are three columns because the traceroute sends three separate signal packets.
 This is to display consistency, or a lack thereof, in the route.
+
 ## Tasks
+
 ### Installation
 Traceroute is a tool that is typically used on Linux systems.
 Windows uses a very similar tool, called `tracert`, that comes pre-installed.
+
 #### Ubuntu/Debian
 ```bash
 sudo apt install -y traceroute
 ```
+
 #### CentOS/RHEL
 ```bash
 sudo yum install -y traceroute
 ```
+
 ### Try it Out
 Lets see what hops are made just by making a request to `google.com`:
 ```bash

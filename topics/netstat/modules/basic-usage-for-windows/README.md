@@ -10,9 +10,13 @@
     ]
 }
 -->
+
 # Basic Usage for Windows
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Options on Windows](#options-on-windows)
 - [Tasks](#tasks)
@@ -25,6 +29,7 @@
 <!--TOC_END-->
 ## Overview
 Netstat on Windows displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics (for the IP, ICMP, TCP, and UDP protocols), and IPv6 statistics (for the IPv6, ICMPv6, TCP over IPv6, and UDP over IPv6 protocols).
+
 ## Options on Windows
 Used without parameters, `netstat` displays active TCP connections.
 Typically on Windows CLI tools options when running commands are prefixed with `/`.
@@ -44,6 +49,7 @@ Here are some of the other available options to use with netstat on Windows:
 | `-p` | Shows connections for the protocol specified by Protocol. In this case, the Protocol can be tcp, udp, tcpv6, or udpv6. If this parameter is used with `-s` to display statistics by protocol, Protocol can be tcp, udp, icmp, ip, tcpv6, udpv6, icmpv6, or ipv6. |
 | `-s` | Displays statistics by protocol. By default, statistics are shown for the TCP, UDP, ICMP, and IP protocols. If the IPv6 protocol is installed, statistics are shown for the TCP over IPv6, UDP over IPv6, ICMPv6, and IPv6 protocols. The -p parameter can be used to specify a set of protocols. |
 | `-r` | Displays the contents of the IP routing table. This is equivalent to the `route print` command. |
+
 ## Tasks
 Here, we'll look at how we can find a process using a certain port on a machine.
 It's a common issue where you have an application running (such as a web server) and you are unable to redeploy that application because the old version of it is still running; this means that the port is in use.
@@ -51,11 +57,13 @@ An efficient way to resolve this is to find the process name by the port that it
 For instance, if we knew that the application was listening on port `80`, that means we can use a tool like netstat to identify that application's name by the port that it is listening on.
 
 To start, we need to install an application to do this - NGINX is a simple reverse proxy and web server that can serve that purpose well.
+
 ### Install NGINX on Windows
 - Download NGINX `1.16.1` from [here](http://nginx.org/download/nginx-1.16.1.zip) 
 - Extract the `nginx-1.16.1.zip` file
 - Execute `nginx-1.16.1/nginx.exe` - All you have to do is double click the file; don't expect anything to pop up as it runs in the background
 - Check that NGINX is working by navigating to http://localhost in your browser
+
 ### Identify the Application Using a Port Number
 NGINX runs on port `80`.
 Firstly, we need to get an output from netstat containing the applications name.
@@ -77,14 +85,17 @@ Active Connections
  [nginx.exe]
 ```
 We can see from this output that there is an application (`nginx.exe`) using port `80` on the machine and it has a PID number of `4436`.
+
 ### Stop the Application
 Below are two methods of killing the NGINX process; try identifying and killing the nginx process with both.
 Remember to start NGINX again after killing the process the first time.
+
 #### Using the Process Name
 Now we know the application name, we can use that to kill the application and gain access back to that port.
 ```powershell
 taskkill /IM nginx.exe /F
 ```
+
 #### Using the Process ID (PID)
 To kill a process using its PID we can use the following; replacing `[PID]` with the PID number:
 ```powershell

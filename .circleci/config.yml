@@ -37,6 +37,9 @@ jobs:
             . venv/bin/activate
             pip install -r pip_dependencies
       - run:
+          name: Format all Headings
+          command: ./automation/newline_headings.py
+      - run:
           name: Generate Topic Module Links
           command: ./automation/modules.py
       - run:
@@ -46,8 +49,8 @@ jobs:
           name: Create Topics List of Links
           command: ./automation/topics.py
       - run:
-          name: Create Module Links for Courses
-          command: ./automation/course.py
+          name: Remove Extra Newlines
+          command: ./automation/remove_whitespace.py
       - run:
           name: Create State
           command: ./automation/state.py > state.json

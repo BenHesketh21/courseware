@@ -1,6 +1,9 @@
 # Introduction
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Installation](#installation)
 	- [Linux](#linux)
@@ -19,17 +22,22 @@ NGINX has a few common use cases:
 - Static files: NGINX can serve static files, such as HTML, CSS and JavaScript.
 - Act as a reverse proxy: handle and process all requests before sending them to another application server.
 - Be used as a load balancer: requests can be distrubed over multiple instances of your application to allow for high availability should one of you application servers fail.
+
 ## Installation
+
 ### Linux
 On Linux systems, NGINX can usually be installed using the relevant package manager:
+
 #### CentOS/RHEL
 ```bash
 sudo yum install -y nginx
 ```
+
 #### Debian/Ubuntu
 ```bash
 sudo apt install -y nginx
 ```
+
 ### Windows
 An installer for NGINX can be downloaded from the [NGINX downloads page](http://nginx.org/en/download.html).
 - Download the latest, stable version of NGINX
@@ -78,5 +86,6 @@ Commercial support is available at
 ```
 
 ## Tasks
+
 ### Install NGINX
 Install NGINX for your current Operating System.

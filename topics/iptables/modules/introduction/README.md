@@ -3,9 +3,13 @@
     "estTime": 25
 }
 -->
+
 # Introduction
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Concepts](#concepts)
 	- [Tables](#tables)
@@ -33,14 +37,17 @@ The code for filtering IP packets is already built into the kernel and is organi
 When using the `iptables` command, you will need to be either prefixing commands with `sudo` or be logged in as the `root` user.
 
 ## Concepts
+
 ### Tables
 By default there are three tables in the kernel that contain sets of rules:
 - The `filter` table is used for packet filtering; this is the table that you will likely be using the most. Think of this table as the default table.
 - The `nat` table is used for address translation.
 - The `mangle` table can be used for special-purpose processing of packets.
+
 ### Chains
 Series of rules in each table are called a chain.
 A table can have more than one chain.
+
 #### Filter Table Chains
 The `filter` table has 3 chains: `INPUT`, `FORWARD` and `OUTPUT`.
 The route table decides which chain incoming packets go to.
@@ -59,11 +66,13 @@ Rules can be added to the different chains, to `ACCEPT` or `DROP` packets. There
     |                                                                       |
     `-----------------------------------------------------------------------`
 ```
+
 ### Rules
 All of the packet filtering is based on rules.
 Rules are conditions that can match packets. All the conditions must be met for the rule to apply.
 A rule will usually match things such as: what network interface the packet arrived on (`eth0` for example), what type of packet it is (`ICMP`, `UDP`, `TCP` for example) and the destination port (`80` or `9000` for example).
 A `target` must also be specified, for when these conditions are met, which basically decides what is going to happen to the packet.
+
 #### Targets
 A Target (also known as a jump) can be a user-defined chain, or one that already exists.
 A couple of the built in targets are `ACCEPT` and `DROP`, which are the ones that you will most likely be using.
@@ -80,22 +89,27 @@ You would also have a default policy to `DROP` the packet if none of the conditi
                     |       
                     `----> DROP (Default Policy for INPUT Chain)
 ```
+
 ## Installation
 Iptables actually comes pre-installed on many popular Linux distributions.
 If iptables isn't installed, you can use the following to install it for your operating system:
+
 ### Ubuntu/Debian
 ```bash
 sudo apt install -y iptables
 ``` 
+
 ### CentOS/RHEL
 ```bash
 sudo yum install -y iptables
 ```
+
 ## Tasks
 Here, we'll setup a basic chain for using SSH on a machine.
 Be very careful when following the instructions; **if you are using a remote machine over SSH for this, there is a chance you can block yourself out** if the commands below aren't entered correctly.
 
 In the unlikely case you do get locked out of the machine, you can just restart it to gain access again, **providing that you have not saved your changes**.
+
 ### View Current Rules
 Try running `sudo iptables -v -L` to view the current chains and rules in place.
 You should see that there aren't any rules made:
@@ -109,6 +123,7 @@ Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
 Chain OUTPUT (policy ACCEPT 18 packets, 2286 bytes)
  pkts bytes target     prot opt in     out     source               destination 
 ```
+
 ## Allow for SSH Connections
 We are going to give access to SSH first, before creating the default rules to deny all. This is to make sure that we won't be locked (especially if we are working on a remote machine).
 The SSH protocol uses TCP port `22`, so we will allow access to this machine on port `22`:
@@ -127,6 +142,7 @@ Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
 Chain OUTPUT (policy ACCEPT 44 packets, 5184 bytes)
  pkts bytes target     prot opt in     out     source               destination
 ```
+
 ### Default Polices
 It's best practice to have default rules in place to deny all traffic; we can then create rules with a higher priority to allow certain connections.
 Default targets for chains can be specified by using the `-P` option:
@@ -159,6 +175,7 @@ Chain OUTPUT (policy ACCEPT 34 packets, 5832 bytes)
  pkts bytes target     prot opt in     out     source               destination         
     0     0 ACCEPT     all  --  any    lo      anywhere             anywhere 
 ```
+
 ### Saving
 At this point, you would typically save the changes we made.
 If you don't save, the changes made would be erased on a system reboot (which is good if you locked yourself out).

@@ -1,7 +1,9 @@
 # Cloud Benefits
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 	- [Scaling in/out](#scaling-inout)
 	- [Cloud provider competencies](#cloud-provider-competencies)
@@ -45,6 +47,7 @@ If you were to host your own server, depending on how powerful you will be makin
  mentioned costs involved to think of before doing so, as you might be spending thousands of pounds before you will
   be able to get your server working.
     
+
 ### High availability
 
 Running an application in a variety of physical locations was previous so expensive that only the largest

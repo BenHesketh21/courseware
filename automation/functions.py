@@ -30,67 +30,50 @@ def remove_enclosed_contents(start, end, content):
     sub_content = re.sub(r""+ start + "((.*\n)*)" + end, "", content)
     return sub_content.strip() + "\n"
 def get_props(module):
-    module_readme = open(module + "/README.md", "r")
+    module_readme = open(module + "/README.md", "r", encoding="utf8")
     contents = module_readme.read()
     module_readme.close()
     props_string = get_enclosed_contents("<!--PROPS", "-->", contents)
     if props_string == "":
         props_string = "{}"
     props = json.loads(props_string)
-    props["path"] = module
-    props["readme"] = module + "/README.md"
+    props["gitUri"] = module.replace("\\", "/")
     props["overview"] = get_overview(contents)
     props["name"] = get_title(contents)
     return props
-
+def get_resource_name(module):
+    return module.replace("\\", "/").replace("topics/", "").replace("modules/", "")
 def get_all_modules_for_topic(topic):
     items = Path(topic).glob("modules/*")
     module_paths = filter(lambda item: os.path.isdir(item), items)
     module_paths = map(lambda module: str(module), module_paths)
     modules = []
     for module in module_paths:
-        modules.append(get_props("./" + module))
+        new_module = get_props(module)
+        new_module["resourceName"] = get_resource_name(module)
+        modules.append(new_module)
     return modules
 
 def get_all_topics():
-    items = list(Path("./topics").glob("*"))
+    items = list(Path("topics").glob("*"))
     topics = filter(lambda item: os.path.isdir(item), items)
     topics = map(lambda topic: str(topic), topics)
     new_topics = []
     for topic in topics:
-        new_topics.append(get_props("./" + topic))
+        new_topic = get_props(topic)
+        new_topic["resourceName"] = get_resource_name(topic)
+        new_topics.append(new_topic)
     return new_topics
-
-def get_all_courses():
-    items = list(Path("./courses").glob("*"))
-    courses = filter(lambda item: os.path.isdir(item), items)
-    courses = map(lambda course: str(course), courses)
-    new_courses = []
-    for course in courses:
-        new_courses.append(get_props("./" + course))
-    return new_courses
 
 def get_state():
     state = {
-        "topics": [],
-        "modules": [],
-        "courses": []
+        "topics": []
     }
     # topics & modules
     for topic in get_all_topics():
-        modules = get_all_modules_for_topic(topic["path"])
+        modules = get_all_modules_for_topic(topic["gitUri"])
+        topic["modules"] = []
         for module in modules:
-            state["modules"].append(module)
+            topic["modules"].append(module)
         state["topics"].append(topic)
-    # courses
-    for course in get_all_courses():
-        est_time = 0
-        if "modules" in course:
-            for module in course["modules"]:
-                props = get_props(module)
-                if "estTime" in props:
-                    est_time += props["estTime"]
-        course["estTime"] = est_time
-        state["courses"].append(course)
     return state
-
