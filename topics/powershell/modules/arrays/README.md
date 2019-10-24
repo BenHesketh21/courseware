@@ -2,7 +2,6 @@
 
 <!--TOC_START-->
 ## Contents
-	- [Contents](#contents)
 - [Overview](#overview)
 - [Create](#create)
 	- [One or Less Elements](#one-or-less-elements)
