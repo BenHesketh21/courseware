@@ -1,7 +1,7 @@
 # Amazon Web Services (AWS)
 
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [AWS CLI](#aws-cli)
 - [Modules](#modules)
@@ -15,6 +15,12 @@ The AWS Command Line Interface (CLI) is a unified tool to manage your AWS servic
 With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
 <!--MODULES_START-->
 ## Modules
-- [Elastic Cloud Compute (EC2)](./modules/ec2)
-- [Virtual Private Cloud (VPC)](./modules/vpc)
+- [AWS EC2 Instances](./modules/ec2-instances)
+- [Elastic Cloud Compute (EC2)](./modules/ec2-introduction)
+- [Overview](./modules/ec2-key-pairs)
+- [EC2 VPC Internet Gateways](./modules/vpc-internet-gateways)
+- [Virtual Private Cloud (VPC)](./modules/vpc-introduction)
+- [AWS Route Tables](./modules/vpc-route-tables)
+- [EC2 VPC Security Groups](./modules/vpc-security-groups)
+- [EC2 VPC Subnets](./modules/vpc-subnets)
 <!--MODULES_END-->

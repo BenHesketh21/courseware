@@ -10,8 +10,9 @@
 }
 <!-->
 # Introduction
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Installation](#installation)
 	- [Using Pip](#using-pip)
@@ -27,6 +28,7 @@ Ansible is an open-source software provisioning, configuration management, and a
 It runs on many Unix-like systems, and can configure both Unix-like systems as well as Microsoft Windows. 
 
 ## Installation
+
 ### Using Pip
 A good way to install Ansible is by using the Pip package manager.
 This is because to run Ansible on any machine you are going to need Python installed, with Python installed the Pip package manager is a consistent way to install Ansible on any machine.
@@ -42,9 +44,12 @@ pip install --user ansible
 # check that ansible has been installed
 ansible --version
 ```
+
 ## Task
+
 ### Install Ansible
 Start by making sure that Python installed on you machine, then go ahead and install Ansible using Pip.
+
 ### Configure a Playbook to Install a Web Server
 We can use something called playbooks in Ansible to configure hosts, more on the configuration of this in another module.
 
@@ -67,11 +72,13 @@ Here we have a playbook which installs a basic NGINX web server so that we can g
       name: nginx
       state: started
 ```
+
 ### Run the Playbook
 The `ansible-playbook` command can be used to run our playbook and install NGINX on the server:
 ```bash
 ansible-playbook playbok.yml
 ```
+
 ### Check NGINX has been Installed Correctly
 The `curl` command can be used to check that our web server is running correctly:
 ```bash

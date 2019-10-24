@@ -1,6 +1,9 @@
 # Configuration
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Directives](#directives)
 - [Include Directive](#include-directive)
@@ -137,6 +140,7 @@ sudo systemctl reload nginx
 
 ## Tasks
 Here we are going to be changing the `nginx.conf` file so that it can return three different values depending on what URI we request.
+
 ### Edit the `nginx.conf` File
 Start by editing the `nginx.conf` file to contain the following:
 ```text
@@ -159,6 +163,7 @@ http {
     }
 }
 ```
+
 ### Reload the New Configurations
 Before our changes are going to work we need to reload our NGINX configurations.
 On Linux first try using `systemctl`:
@@ -169,15 +174,18 @@ Otherwise use the `nginx` binary:
 ```bash
 nginx -s reload
 ```
+
 ### View the New Changes
 We can then use a web browser to see the changes by putting the different resources in the URL bar (`/`, `/one`, `/two`).
 If you are on a Linux machine with no GUI, the `curl` command can be used to make HTTP requests to NGINX.
 
 Depending on the URI request that you made, you should get the relevant response from NGINX for how you configured it above.
+
 #### Response In a Web Browser
 ![NGINX Default Location](https://lh3.googleusercontent.com/zvRwSbAuZTBwFswyeLBlnrejvGeXXFhSj46CRv_BcGLc24vq7NXDXnnTqOArLyTPzwnvJW-D9J5W3jjzqTmdeG2v3JyJMgekL3CO7ENhYij4_fphEBZAaQLcenWRNGJRE-MG3txSQIVFqQRNDU3vlSaStCAr9JZmNfNfdNH_-2ieGEnIAIqpAe3vqKFg9f4i78RaJlY7B0YTq-IReQ2uXe7qiVU4ZzdlI0nARuxYWnBPfxIVL4czTqajMyMvIHtHx0wxnscljfk4t6aX-L5TN35rYBrVm9LBffJ6davYqL8xCNOYjcM0KJs2-EgcbuxDRZe5grJt1gc1ZC-2YkDJL189ayiy_QgkzdvnCTKd8Vta2Omb2DJJ-YbY4PPLnRvHI1NkNvMM8HH5D3AK7rW6zlUjDK7XIvpLK6stYSscvpAVJ9YZ1qZHz5wMUvD8-_ejXS4v0oqHnlm__ICX-rFNIPmOcy1Og5LdkXNIudqbyqgba6_fQ5rLKldO5VndwomTS1-44JEJW7qwyrBrz9jf00TEdhSapBHtPnlWdQt1At2nlnL_feCHejORwIkmK4Yeqohk_pE6xycPMkuMeXTsJt2Fy8LR-r1p3p32EVtStZmzxj_fh7limlm2V4s1p76KQwPT4dPO_57vxqxN860AbGC86XBlFNFSysCdlGQ0JDPuXx-PJRpDCWCfpYu97zHYxJgRmVoRQYC7b7nd0P07no3pHLTNGaLmuFRTPLvevE5NvTGL=w1030-h117-no)
 ![NGINX One Location](https://lh3.googleusercontent.com/ou48oAWQIHHDH7ETrVA9mClrO3FrbXYOtOgBKbvWNxpZrWh96jdfQq3r5cWL3gOOuvrzLMDWeIqDdMmFqT9omG9b3Pub9-F5WuEecVB9L-3B-Spxb9tOWzIFjny30MapJVJH_wBcib05RYx8fLhcefR7JSe4u88RFFmiJzimEkdq1DUP5pd2X7uo-cZ4NWfHP_1thYLwWvgccQ2BbZRXhDapPCoIvzg8N5bh7WGkhFogl25_ZF7p_knEjRuzcuuwSdbdkkcoOl1eKm-QSFFly8xp5NV_CuL_gfzRwtxG_gKJhzu6n_RfYSm7Y_RjP7uhh9LeHELvtHD1HIRrzNSPQNrfkPUxr1IjRB_prqCY6qYeBtq_2ERu9ep8cQWH5I7qyfeaKtIihaCLta4__VAJD0JIphy-Wgmipvfc7zp0J7rIVT20rp-OVq4VdX5W7HahFdK1S89nud5iFPMv1fI0LZS2XxKaDA78OkuvxhZjwqV8flcAcXLu6yIz3nX5I0tGa3qqN2iQ2Iyc-ap7CSson_OLW5KZS7b1rYAoVswAdt-tegCzkZo1g_3FivbTy3OohFzFCfds7je8CQNvBGylAtk0pRrTAXokM7IFGlcrUDpAp2P6R2XTuv02qNe9d2eCtwFRSy_2Sy3HByD7EZhHGHpaxlkCL_34uIgw5Kqs9MyrTE6eYDSZiXniEUtlrQ2NcQVyB2GxGgxxoxeY-4VN2SibkqYux_lq-n2z84r2qB9NQrVG=w1029-h115-no)
 ![NGINX Two Location](https://lh3.googleusercontent.com/HEFDlUmKvtq53zasqkcfVwoBhVtFSIAkAErWQbzzp5yHj3m7aArKtKN6eLGOYElX-MEQ_Jn4ADN_4s98ZynUoEw_YxYeyDpao-1Tq32p5D_lW51ll_Oy6MUax14wuiuY4LfR8FDp3f8wiiCOyHSrOE0YSzwweUolbD91AAXIxho1h9IbSZKG94sOPH_410sIefJtW1B5phM3Mim5JVjdHdWQkx22LAE1Apy0BRE4OwJsggAy-ke_RZN7HoWMNeRGXUqPxEAVJKIthCgFxKgMv0ALFZ7WvIVBtzfzt7_zm6D2hX4qHD5btv9fbP8liiKYVgkv9xCsy4Sdj6EHu3X3rOVhZekQioxpYyvw8G-6GrX0ZGYqD6Zo9M3SgsSeeJcavfgDNoL7FJv6HtJ2cZLsOExEeqHNuM1EJ12xBqJzLpBN_ZktKJlKeIOuhccTkL95gXDAMe0V-nKAjsXKDkvbfJCRmysYpo8T5saOISUUQoO_zYMNYzdjHX8uFFEQVIu2twk5ul96SgUmDfvjvxjN56-g9Try-EojDZAmWSypfZSVInq3wwd935WFJm8HotndMJPwH3dGCDtYpADYRyL7-XIz_tmDG0HBsW6Arab2z7jKpY1N6eXbKUXt8E-RBmgYa78sLLJMuP8gu9rBRgGCiFjjFhFLVHrUKjHFqHBIVSJertcW85NbUFgj9tTapp6TNIvhmYz5vMfRdyfUQvMdXNZUHEdXTkn-g9Sn1Q28_3qGmGNl=w1029-h116-no)
+
 #### Response Using `curl`
 ```text
 bob@work-laptop:~/projects/github.com/bob-crutchley/notes$ curl http://localhost

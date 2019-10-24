@@ -3,7 +3,7 @@
 # Groovy Programming Language 
 
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Installation](#installation)
 	- [Mac OS X](#mac-os-x)

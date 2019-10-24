@@ -3,10 +3,13 @@
 	"estTime": 10
 }
 -->
+
 # Forking
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Proposing a change](#proposing-a-change)
 - [Your idea](#your-idea)
@@ -40,6 +43,7 @@ your own project. For example, if you found a web application that you liked, an
 you could fork the project and add any additional functionality. This would then be yours to freely use or distribute.
 
 ## Tasks
+
 ### Forking a repository
 
 You will now: fork a remote repository, configure upstream (to get updates from the original repository) and propose a change to the owner

@@ -1,6 +1,9 @@
 # Conditional Statements
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [`if`, `else` & `elseif` Statements](#if-else--elseif-statements)
 	- [`if`](#if)
@@ -21,6 +24,7 @@ PowerShell is like many other languages; it uses `if`, `else`, `elseif` and `swi
 Conditions are evaluated to a boolean value (True or False).
 
 ## `if`, `else` & `elseif` Statements
+
 ### `if`
 The `if` statement can be used to execute statements based on whether the provided condition is true or not:
 ```powershell
@@ -31,6 +35,7 @@ if (false) {
     echo "this statement will not execute because the condition is not true"
 }
 ```
+
 ### `else`
 The `else` statement can be used in conjunction with the `if` statement, to provide a block of statements to run if the `if` condition is not met:
 ```powershell
@@ -40,6 +45,7 @@ if (false) {
     echo "this statement will run, because the 'if' condition was not met"
 }
 ```
+
 ### `elseif`
 Using `elseif` will help if there's more than one condition that you're going to need to check.
 You can have as many `elseif` statements as you like, but if you start getting many more than 2 or 3, for instance, you should consider using a `switch` statement.
@@ -50,6 +56,7 @@ if (false) {
     echo "this statement will not run because the 'ifelse' condition was met"
 }
 ```
+
 ### Nesting Statements
 These statements can, of course, be nested. However, be cautious when doing this, as having lots of nested statements can be very detrimental to the readability of the code:
 ```powershell
@@ -62,8 +69,10 @@ if (true) {
     }
 }
 ```
+
 ## `switch` Statement
 The `switch` statement is more appropriate to use when you want to test equality; for instance, checking if a given value eqauls something specific.
+
 ### Example
 The example shown below will ask the user for a number between 1 and 3. Once a number has been selected, `"You selected [NUMBER]"` will be printed to the terminal.
 If a number between 1 and 3 isn't entered then `"You didn't select a number between 1 and 3"` will be displayed on the terminal.
@@ -104,6 +113,7 @@ Which planet would you like to know how much this weighs on?
    4. Saturn  5. Uranus  6. Neptune
 "
 ```
+
 ### Calculate the User's Input with `if`, `else` & `elseif`
 Using the `weight` and `planetNumber` variables, we can now figure out what weight it is going to be.
 
@@ -147,6 +157,7 @@ Once you have created the script, try running it!
 ```powershell
 ./space-weight.ps1
 ```
+
 ### Calculate the User's Input with a `switch` Statment
 The last script will work fine, but it can be cleaned up quite a bit by using a `switch` statement instead; this will utilise the same logic that was implemented in the `if`, `elseif`, `else` example:
 ```powershell

@@ -1,7 +1,9 @@
 # Cloud Enabling Technologies
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 	- [Fast wide-area networks](#fast-widearea-networks)
 	- [Disaster recovery](#disaster-recovery)
@@ -81,6 +83,7 @@ Software-as-a-service is frequently multi-tenant, for Cloud services such as Gma
 * `My webmail provider almost certainly uses virtualisation, but when I log on, I don’t get a virtual machine all to
  myself. Instead, the application prevents me from seeing other users email`
   
+
 ### Containers
 
 Subdivide a single virtual machine, which results in less overhead than creating multiple VMs:

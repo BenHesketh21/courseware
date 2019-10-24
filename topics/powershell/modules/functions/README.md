@@ -1,7 +1,9 @@
 # Functions
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Powershell Functions](#powershell-functions)
 - [Basic Functions](#basic-functions)

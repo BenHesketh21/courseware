@@ -1,7 +1,7 @@
 # Notes
 Centralised project for learning Cloud and DevOps Topics (just getting started).
 <!--TOC_START-->
-### Contents
+## Contents
 - [Repository Forking & Rebasing](#repository-forking--rebasing)
 	- [Contributing](#contributing)
 	- [Automation](#automation)

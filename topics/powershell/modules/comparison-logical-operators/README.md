@@ -1,7 +1,7 @@
 # Comparison and Logical Operators
 
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Comparison Operators](#comparison-operators)
 - [Logical Operators](#logical-operators)

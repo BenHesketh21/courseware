@@ -1,6 +1,9 @@
 # Variables
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Assignment and Access](#assignment-and-access)
 - [Data Types](#data-types)
@@ -43,6 +46,7 @@ Variables of type `Integer` can be applied by omitting the quotes and setting th
 ```powershell
 $myIntegerVariable = 2
 ```
+
 ### Explicitly Applied Data Types
 There are often times where we should set the data type for a variable as it allows for functionality which only a specific type has. It also improves the readability of the code.
 For example, a variable with a type of `DateTime` will have more functionality built-in to work with dates as opposed to using a `String`.
@@ -77,11 +81,13 @@ TotalMilliseconds : 950400000
 ```
 
 ## Tasks
+
 ### Create a Simple String Variable
 Create a simple variable which contains your name, for the example below you can replace `bob` with your name:
 ```powershell
 $name = "bob"
 ```
+
 ### Access the `name` Variable
 The `name` variable that has just been created can be accessed like this:
 ```powershell
@@ -91,11 +97,13 @@ You should then see an output like this but with your name:
 ```text
 Hi, my name is bob
 ```
+
 ### Create an Integer Variable
 We can create another variable for your age, you can replace `23` here with your age:
 ```powershell
 $age = 23
 ```
+
 ### Access both the `name` and `age` Variables
 Both variables that have been created can be accessed in an `echo` command at the same time:
 ```powershell

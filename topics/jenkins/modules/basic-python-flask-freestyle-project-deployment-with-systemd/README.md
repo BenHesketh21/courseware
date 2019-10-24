@@ -9,9 +9,13 @@
     ]
 }
 -->
+
 # Basic Python Flask Freestyle Project Deployment with systemd
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Sample Project](#sample-project)
 - [Host Machine Configuration](#host-machine-configuration)
@@ -24,19 +28,23 @@
 ## Overview
 Basic deployment of a Python Flask server, using systemd and a Freestyle Project.
 Included in this module folder is a Python Server that uses the Flask framework.
+
 ## Sample Project
 The sample project included for this example is a single python script.
 There is also a systemd service configuration included, for running the application as the `pythonadm` user.
 Please note that, because of systemd, this example will not work inside a docker container.
+
 ## Host Machine Configuration
 There are a few prerequisites for this module, so make sure the following has been configured on your machine:
 - Linux operating system with systemd, not in a container
 - Jenkins installed & running
 - Python 3 installed
 - Jenkins user, configured as a sudo user with no password
+
 ## Jenkins Job
 Create a Jenkins Freestyle Project called flask-app and configure it to download this code onto its filesystem; this can be configured in the Source Control Management section:
 - `Repository URL` set to `https://github.com/bob-crutchley/notes`
+
 ## Shell Script
 Add the following into an `Execute shell` build step:
 ```bash
@@ -65,6 +73,7 @@ EOF
 sudo systemctl start flask-app
 ```
 See below for explanation of the commands used in this script:
+
 ### Installing the systemd Service 
 To account for any changes to the script, or if this is the first time installing the application, the service script needs to be installed into `/etc/systemd/system/`.
 For systemd to pickup the changes, we must also reload the services with `systemctl daemon-reload`.
@@ -77,6 +86,7 @@ sudo systemctl daemon-reload
 # stop the old service
 sudo systemctl stop flask-app
 ```
+
 ### Installing and Configuring the Application Files
 Here, we can recreate the application folder to make sure we have a fresh start.
 Once the folder has been recreated, the application can be copied in.

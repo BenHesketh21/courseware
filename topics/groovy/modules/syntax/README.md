@@ -1,6 +1,9 @@
 # Syntax
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Commenting](#commenting)
 	- [Single Line Comments](#single-line-comments)
@@ -22,10 +25,12 @@ Many of the concepts will be easier to pick up if you have used a programming la
 
 ## Commenting
 Comments in Groovy are just like Java:
+
 ### Single Line Comments
 ```groovy
 // single line comment
 ```
+
 ### Multi-Line Comments
 Multi-line comments start with `/*` and end with `*/`; this saves you having to put `//` on every commented line:
 ```groovy
@@ -33,11 +38,13 @@ Multi-line comments start with `/*` and end with `*/`; this saves you having to 
     multi line comment
 */
 ```
+
 ### Inline Commenting
 The same syntax for multi-line comments can be used for commenting inline:
 ```groovy
 println 1 /* one */ + 2 /* two */
 ```
+
 ### Shebang Line
 If the `groovy` command is available on your `PATH`, you can add a shebang line to your Groovy scripts so that you can execute your script directly. Here's an example:
 ```groovy
@@ -45,6 +52,7 @@ If the `groovy` command is available on your `PATH`, you can add a shebang line 
 println "Hello"
 ```
 If the script above was in a file called `test.groovy`, you would be able to execute it by running `./test.groovy`.
+
 ## String Interpolation (GStrings)
 String interpolation can be used to easily get the value of a variable into a string; in Groovy, these are known as GStrings.
 To do this, you need to include the variable reference within `${}`, inside of a literal string:
@@ -59,7 +67,9 @@ def getName() {
 }
 println "Hello, ${getName()}"
 ```
+
 ## Optional Parenthesis
+
 ### Overview
 In an attempt to make code more readable, Groovy allows you the choice of omitting parenthesis.
 For example, you can omit parenthesis on function calls:
@@ -69,6 +79,7 @@ System.out.println("Hello")
 // and the "groovy" way...
 println "Hello"
 ```
+
 ### When you need parenthesis
 However, sometimes you will still need to use parenthesis. One example is when you are calling a function with no parameters;
 we need to include parenthesis here so that Groovy doesn't think that you are trying to access a property:
@@ -78,11 +89,13 @@ println person.name
 // accessing a function
 println person.getName()
 ```
+
 ### Omitting Parenthesis with Named Parameters
 Named parameters can be used whilst omitting parenthesis:
 ```groovy
 myObject.myFunction param1: "First Parameter", param2: "Second Parameter"
 ```
+
 ## Tasks
 Here are some tasks to try out some of the syntax discussed above.
 For any of the tasks where you are writing code, please add them to a `groovy-syntax.groovy` file in this folder, and create a single line comment to separate each task, using the task name, like this:
@@ -95,6 +108,7 @@ def codeForSecondTask() {
     return ""
 }
 ```
+
 ### Commenting
 Create a comment at the top of the file that contains the following:
 ```text

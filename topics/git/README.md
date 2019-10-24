@@ -1,6 +1,6 @@
 # Git
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 	- [Software and Version Control](#software-and-version-control)
 	- [Online Services That Use Git](#online-services-that-use-git)
@@ -55,6 +55,8 @@ brew install git
 - [Branching](./modules/branching)
 - [Cloning](./modules/cloning)
 - [Forking](./modules/forking)
+- [GitHub Project Boards](./modules/github-project-boards)
+- [GitHub Reviews](./modules/github-reviews)
 - [Merging](./modules/merging)
 - [Pull Requests](./modules/pull-requests)
 - [Reverting](./modules/reverting)

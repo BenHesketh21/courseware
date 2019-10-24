@@ -19,7 +19,7 @@ for readme in readme_files:
         for line in lines:
             if line.startswith("```"):
                 code_block = not code_block
-            if not code_block and line.startswith("#") and line != "### Contents":
+            if not code_block and line.startswith("#") and line != "## Contents":
                 headings.append(line)
 
     heading_links = []
@@ -41,7 +41,7 @@ for readme in readme_files:
                         heading_links[i] = heading + "-" + str(x)
                     x += 1
     toc = {}
-    table_of_contents = "### Contents\n"
+    table_of_contents = "## Contents\n"
     for i, heading in enumerate(headings):
         depth = 0
         for letter in heading:

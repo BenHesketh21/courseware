@@ -1,6 +1,9 @@
 # Basic Usage for Linux
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Options on Linux](#options-on-linux)
 - [Tasks](#tasks)
@@ -13,6 +16,7 @@
 <!--TOC_END-->
 ## Overview
 The netstat tool is very important for Linux network administrators, as well as system administrators, to monitor and troubleshoot their network related problems and determine network traffic performance.
+
 ## Options on Linux
 |Short and Long Options|Description|
 |----------|--------------|
@@ -26,6 +30,7 @@ The netstat tool is very important for Linux network administrators, as well as 
 |-u, --udp|Filter UDP Sockets|
 |-v, --verbose|Show more information and statistics|
 |-V, --version|Display the version of netstat that's installed|
+
 ## Tasks
 Here, we'll look at how we can find a process using a certain port on a machine.
 It's a common issue where you have an application running (such as a webserver) and you are unable to redeploy that application because the old version of it is still running; this means that the port is in use.
@@ -33,16 +38,20 @@ An efficient way to resolve this is to find the process ID by the port that it's
 For instance, if we knew that the application was listening on port 80, that means we can use a tool like netstat to identify that application's PID by the port that it is listening on.
 
 To start, we need to install an application to do this - NGINX is a simple reverse proxy and webserver that can serve that purpose well.
+
 ### Install NGINX for Your Operating System
+
 #### Ubuntu/Debian
 ```bash
 sudo apt update
 sudo apt install -y nginx
 ```
+
 #### CentOS/RHEL
 ```bash
 sudo yum install -y nginx
 ```
+
 ### Identify the Process ID of the Application Using a Port Number
 NGINX runs on port `80`.
 Firstly, we need to get an output from netstat containing the applications PID:
@@ -91,6 +100,7 @@ You will now be able to use the PID of NGINX (1665 in this case) to manage that 
 ```bash
 sudo kill 1665
 ```
+
 ### Clean Up
 Lets stop and remove NGINX to cleanup:
 ```bash

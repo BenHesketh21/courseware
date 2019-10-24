@@ -1,7 +1,9 @@
 # Error Handling
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Terminating vs Non-Terminating Errors](#terminating-vs-nonterminating-errors)
 - [The $error Variable](#the-error-variable)

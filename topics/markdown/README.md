@@ -1,7 +1,7 @@
 # Markdown
 
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Usage](#usage)
 - [Cheat Sheet](#cheat-sheet)

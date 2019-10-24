@@ -1,7 +1,9 @@
 # Pull Requests
 
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Collaborative Tool](#collaborative-tool)
 - [Creating a Pull Request](#creating-a-pull-request)
@@ -34,6 +36,7 @@ This is really great, as it can be done before any changes are merged into the m
 There are 2 main flows when dealing with pull requests:
 
 ### 1) PR From a Branch Within a Repository
+
 #### Create a feature branch and push it to VCS
 1. Clone a repository down using `git clone [URL to repository]` and `cd` into it
 2. Create and switch to a new (feature) branch using `git checkout -b [new branch name]`
@@ -65,6 +68,7 @@ This is done on your VCS GUI (in this example, we are using GitHub):
 ![](https://i.imgur.com/xwRCTyk.png?3)
 
 ### 2) PR from a Forked Repository
+
 #### Create a Pull Request
 This is also done on your VCS GUI:
 

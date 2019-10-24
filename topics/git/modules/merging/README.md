@@ -3,9 +3,13 @@
     "estTime": 30
 }
 -->
+
 # Merging
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 	- [Merge conflicts](#merge-conflicts)
 - [Tasks](#tasks)
@@ -34,6 +38,7 @@ This new commit would end up in the following history.
      /         \  
 A---B---C---D---H master
 ```
+
 ### Merge conflicts
 Merge conflicts happen when more than one person has edited a file, and the line numbers that were edited are the same
 . It can also happen if someone deleted a file that another person was working on.
@@ -42,9 +47,12 @@ This conflict only affects the person performing the merge, and the rest of the 
 
 If a merge conflict happens, *Git* will automatically halt the merge process and mark the file, or files, that are
  conflicting. It is then up to the developer to resolve them.
+
 ## Tasks
+
 ### Handling Merge Conflicts
 You will now go through the steps required to cause a merge conflict.
+
 #### Initialise a Repository for Testing Merge Conflicts
 1. Open a terminal
 2. Create a new directory by executing `mkdir git-merge-conflict`
@@ -56,6 +64,7 @@ You will now go through the steps required to cause a merge conflict.
  hello.txt` command
 8. Now you need to create a save point, which is known as a commit. This will have the current state of the *hello.txt file in it. Execute the `git commit -m "initial commit"` command to achieve this </br>
 ![Fork >](https://imgur.com/cm8Oky3.png)
+
 #### Create a Branch with a Conflict
 Now that you have a repository and a master branch with a file on it, the next step is to create a new branch to
  use to cause the merge conflict.
@@ -86,6 +95,7 @@ making a change to the file
 Let's commit the change we made to the *hello.txt* file to the master branch, by executing `git add hello.txt` followed by
  `git commit -m "modified hello.txt file"`. </br>
 ![Fork >](https://imgur.com/y6GoKCn.png) 
+
 #### Attempt to Merge the New Branch
 Now, we want to merge changes from the *new-branch* branch to the *master* branch. However, Git won't be able to figure out which version of
  the second line to use - it will create a merge conflict, which the developer will be responsible for resolving.
@@ -103,6 +113,7 @@ making a change to the file
 ```
 The main thing to recognise is that the first line (`hello world`) doesn't have a conflict, but there is a conflict between the
  second line of the *master* and *new-branch* branches.
+
 #### Resolving the Conflict
 To resolve the merge conflict, there are a couple of steps needed:
 Firstly, decide which second line to keep out of `making a bigger change` or `making a change to the file`. You could also

@@ -1,6 +1,6 @@
 # netcat
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Versions](#versions)
 - [Installation](#installation)

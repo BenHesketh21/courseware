@@ -1,6 +1,9 @@
 # Web Server Configuration
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Web Servers](#web-servers)
 	- [Hardware](#hardware)
@@ -49,6 +52,7 @@ http {
     }
 }
 ```
+
 ### Virtual Server
 The virtual server must be configured to understand a few important things.
 All the points discussed below are configured in the virtual `server` context.

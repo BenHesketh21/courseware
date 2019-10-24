@@ -1,6 +1,9 @@
 # Frames
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overiew](#overiew)
 - [Incoming and Outgoing Frames](#incoming-and-outgoing-frames)
 - [Frames Traversing the Network](#frames-traversing-the-network)
@@ -38,6 +41,7 @@ FCS can use CRCs to validate the data that has been transmitted. CRCs work in a 
 ## Tasks
 For the task below you will need Wireshark installed.
 If you are unsure what Wireshark is, how to use or install it, please have a look at the [Wireshark Introduction Module](/topics/wireshark/modules/introduction)
+
 ### Viewing Frames with Wireshark
 We can start by running a scan until some packets come in.
 Once there are some packets there, you can stop the scan and click on one of the packets.

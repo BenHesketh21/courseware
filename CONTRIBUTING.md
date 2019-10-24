@@ -1,7 +1,7 @@
 # Contributing Guidelines
 Anyone is welcome to collaborate on this project, but please adhere to the conventions in place.
 <!--TOC_START-->
-### Contents
+## Contents
 - [Concepts](#concepts)
 - [Naming Conventions](#naming-conventions)
 - [Topic Structure](#topic-structure)

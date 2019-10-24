@@ -1,6 +1,9 @@
 # TCP
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [TCP Header Format](#tcp-header-format)
 - [TCP Operations](#tcp-operations)
@@ -36,6 +39,7 @@ This many fields are needed in a TCP header, because TCP has quite a few capabil
 ![TCP Header](https://lh3.googleusercontent.com/o9ex3p3QMp5ONvsl-rZFnJ7g6K0wdI-CdxgT5qj1Zs-H56gPK3x26p4ijnaxaPn0OcLmBl9MUZkgHzsHNCgtW0YxZ8zB8Pn9APiyNnsfB61HlQq8W3Xicx5pOiXzxRAcHBiXFD0YFa56pr9dJAsyWrgV3otXqjtgomSGOt0gmkGAC7eVnAPmX1cH1WyW3p6nn-lY-UR_WMdkMxyRXaRvr3wBRd5VDnTdSHYU48xHZuAAOmeiIc84zccP2r8axDjPuNIvJ56ge5tOIh3gASN1v5_A9c-N5UAAyjPBuBeFe0obju3hbC0U5tTNNrMBQmgt_brDZzOh2yF3RGYH-9K8Bd0nuJi2ufyv9Unb_bF9MdM-hRTNYPIbSOceSziLGOBwGSyrd1nVtnzDVrlIADcYSg9Lvv4EJePZITkUmrXR3QxKLXU_r69UAj_S3nEBpAKi3KddFxDsuDLN-UCbg0mN5LmhRvnx2nCbIeUkYOvyeQbPE36b4b07xcdY3XQaeVqw-BlTEtV3Ix0wQW3HXUyOfFhhBY-JnaHlmOaU0DLjuPf4n1qidj4zY3ZFgyXuYm1zdWRY2QkYUABa4cQow9yLEv3LU__zmbFTA2D_JUoaoeNlR5OSgcDfcDWLlGZ5Xq4msVvNL_knd5FwM1itrZCKc33eIUhBmOgDofoh4PPz-kdTDG1QFvo4__NOCBJGKLBlO4V5ikqg8d1tNVgNSe94nlmtkp_qkJknOVdTAt7n2ZmAO20n=w1084-h628-no)
 
 ## TCP Operations
+
 ### Connection Establishment
 There is a **three-way handshake** when establishing a new connection with TCP. The control flags are used to communicate which stage the connection establishment is at, and there are two control flags used for establishing a new connection:
 - `SYN` – The Synchronisation flag is used in the first request to the remote device. This flag is only ever used in the first packet from the sender and the receiver.

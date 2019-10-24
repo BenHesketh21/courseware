@@ -1,6 +1,9 @@
 # Closures
+
+
+
 <!--TOC_START-->
-### Contents
+## Contents
 - [Overview](#overview)
 - [Basic Usage](#basic-usage)
 	- [Create](#create)
@@ -15,7 +18,9 @@
 ## Overview
 A closure in Groovy is an open, anonymous, block of code that can take arguments, return a value and be assigned to a variable.  A closure may reference variables declared in its surrounding scope.  In opposition to the formal definition of a closure, a closure in the Groovy language can also contain free variables that are defined outside of its surrounding scope.
 Although it breaks the formal concept of a closure, a Groovy closure does offer many advantages.
+
 ## Basic Usage
+
 ### Create
 Here is a very simple example of a Closure:
 ```groovy
@@ -23,6 +28,7 @@ def simpleClosure = {
     println "Hi"
 }
 ```
+
 ### Execute
 We can execute a closure either just like we would a function, by using `()`, or by using the `call()` function:
 ```bash
@@ -34,6 +40,7 @@ simpleClosure()
 // using the call() function
 simpleClosure.call()
 ```
+
 ### Parameters
 Closures can be configured to have parameters very easily:
 ```groovy
@@ -46,6 +53,7 @@ def multiParamClosure = {param1, param2, param3 ->
     println "${param1}, ${param2}, ${param3}" 
 }
 ```
+
 ### Implicit `it` Parameter
 If you define a closure without parameters, it can still take a single parameter; this parameter will be stored in a variable called `it`:
 ```groovy
@@ -54,6 +62,7 @@ def justAnotherClosure = {
 }
 justAnotherClosure "test"
 ```
+
 ## Using a Closure as a Parameter
 Because closures are just stored as variables, they can be passed to other functions and closures:
 ```groovy
@@ -69,6 +78,7 @@ myFunction myClosure
 
 // Hello from myClosure
 ```
+
 ### `each` Function Example
 We can pass a closure to the `each` function, which will execute the closure for each element in an array:
 ```groovy
