@@ -2,7 +2,6 @@
 
 <!--TOC_START-->
 ## Contents
-	- [Contents](#contents)
 - [Overview](#overview)
 - [For Loop](#for-loop)
 	- [Iterating an Array](#iterating-an-array)

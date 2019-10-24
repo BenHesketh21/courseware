@@ -1,7 +1,6 @@
 # Ansible
 <!--TOC_START-->
 ## Contents
-	- [Contents](#contents)
 - [Overview](#overview)
 - [Modules](#modules)
 

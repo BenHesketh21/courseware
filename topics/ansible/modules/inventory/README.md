@@ -11,7 +11,6 @@
 
 <!--TOC_START-->
 ## Contents
-	- [Contents](#contents)
 - [Overview](#overview)
 - [Configuration Overview](#configuration-overview)
 	- [Inventory Files for Different Environments](#inventory-files-for-different-environments)

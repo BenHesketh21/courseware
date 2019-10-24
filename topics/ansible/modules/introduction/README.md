@@ -14,7 +14,6 @@
 
 <!--TOC_START-->
 ## Contents
-	- [Contents](#contents)
 - [Overview](#overview)
 - [Installation](#installation)
 	- [Using Pip](#using-pip)
